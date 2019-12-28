@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('webhook', 'LineController@webhook');
+Route::match(['get', 'post'], 'test', 'LineController@test');
+// Route::post('webhook', 'OldLineController@webhook');
